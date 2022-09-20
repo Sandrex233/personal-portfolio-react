@@ -1,9 +1,14 @@
 import React from 'react'
 
 const Contact = () => {
+    function handleSubmit(e) {
+        e.preventDefault();
+        console.log('You clicked submit.');
+    }
+
     return (
         <div name="contact" className='w-full h-screen bg-[#0a192f] flex justify-center items-center p-4'>
-            <form method="POST" action="https://getform.io/f/d28adb52-ccbc-480c-af8d-9edee6091415" className='flex flex-col max-w-[600px] w-full'>
+            <form onSubmit={handleSubmit} method="POST" action="https://getform.io/f/d28adb52-ccbc-480c-af8d-9edee6091415" className='flex flex-col max-w-[600px] w-full'>
                 <div className='pb-8'>
                     <p className='text-4xl font-bold inline border-b-4 border-pink-600 text-gray-300'>Contact</p>
                     <p className='text-gray-300 py-4'>{'//'} Submit the from below or send me an email - sandrex233@gmail.com</p>
